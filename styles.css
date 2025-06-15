@@ -75,8 +75,8 @@ body {
 /* Hero Section (Homepage) */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 70vh;
+    min-height: 500px;
     background: linear-gradient(rgba(30,58,95,0.8), rgba(30,58,95,0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%231e3a5f" width="1920" height="1080"/><path fill="%23c8102e" opacity="0.1" d="M0 400L80 450L160 400L240 450L320 400L400 450L480 400L560 450L640 400L720 450L800 400L880 450L960 400L1040 450L1120 400L1200 450L1280 400L1360 450L1440 400L1520 450L1600 400L1680 450L1760 400L1840 450L1920 400V1080H0V400Z"/></svg>');
     background-size: cover;
     background-position: center;
@@ -277,7 +277,12 @@ body {
 
 .stat-box {
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
 }
 
 .stat-number {
@@ -341,7 +346,7 @@ body {
 }
 
 .service-header {
-    background: linear-gradient(135deg, var(--navy), var(--red));
+    background: var(--navy);
     color: var(--white);
     padding: 30px;
     position: relative;

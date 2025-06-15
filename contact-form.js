@@ -5,7 +5,6 @@
 (function() {
     // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
     emailjs.init('Cdtl1liUEf-q04r30');
-    emailjs.send('gmail_1', 'template_cb3vlel', formData)
 })();
 
 // Form submission handler
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send email using EmailJS
             // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual values
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            emailjs.send('gmail_1', 'template_cb3vlel', formData)
                 .then(function(response) {
                     // Success
                     showMessage('success', 'Thank you for your inquiry! We\'ll get back to you within 24 hours.');
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitButton.innerHTML = 'Send Message';
                 }, function(error) {
                     // Error
-                    showMessage('danger', 'Oops! Something went wrong. Please try again or call us at (830) 555-DRONE.');
+                    showMessage('danger', 'Oops! Something went wrong. Please try again or call us at (210) 549-7015.');
                     submitButton.disabled = false;
                     submitButton.innerHTML = 'Send Message';
                     console.error('EmailJS error:', error);

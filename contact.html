@@ -99,7 +99,7 @@
                     <h2>Request a Free Quote</h2>
                     <p class="lead">Tell us about your project and we'll provide a custom proposal within 24 hours</p>
                 </div>
-                <form>
+                <form id="contactForm">
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label for="firstName" class="form-label">First Name *</label>
@@ -191,7 +191,8 @@
                             </div>
                         </div>
                         <div class="col-12 text-center mt-5">
-                            <button type="submit" class="btn-submit">Submit Request</button>
+                            <button type="submit" class="btn-submit" id="submitButton">Submit Request</button>
+                            <div id="formMessage" class="alert" style="display: none;"></div>
                             <p class="text-muted mt-3">* Required fields</p>
                         </div>
                     </div>
