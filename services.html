@@ -1,148 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Services - Bandera Skyworks</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bandera Skyworks | Professional Drone Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-drone me-2"></i>BANDERA SKYWORKS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <h1>Our Services</h1>
-    
-    <h2>Aerial Inspections</h2>
-    Gain detailed insight into hard-to-reach assets and critical infrastructure
-    with drone inspections that reduce risk, time, and cost. Our drone platforms
-    capture both visual and thermal imagery to support maintenance planning,
-    safety audits, and performance evaluations with unmatched clarity and
-    accuracy.
-    
-    <h2>Energy & Utilities</h2>
-    <h3><img src="./fontawesome/svgs/utility-pole.svg" height="30"
-    width="30">Powerline Inspections</h3>
-    <p>Our comprehensive powerline inspection services leverage cutting-edge
-    automated flight technology and high-resolution imaging systems to transform
-    how utilities monitor their infrastructure. We specialize in rapidly
-    identifying critical issues including electrical faults, cracked or damaged
-    insulators, vegetation encroachment, and structural defects that could
-    compromise grid performance. Our advanced aerial platforms follow precisely
-    programmed flight paths, capturing detailed visual and thermal data along
-    entire transmission and distribution corridors.</p>
-    
-    <p>By replacing traditional ground-based inspections with our efficient aerial
-    solutions, utilities can dramatically reduce operational costs associated
-    with field crew deployment and vehicle maintenance. Our technology enables
-    inspection teams to cover more territory in less time, minimizing truck
-    rolls while maximizing asset visibility. This proactive approach to
-    infrastructure monitoring helps utilities maintain superior grid
-    reliability, prevent outages before they occur, and ensure compliance with
-    vegetation management regulations. The result is a safer, more resilient
-    power delivery system that keeps communities connected while optimizing
-    maintenance budgets and resource allocation.</p>
-    
-    <h3><img src="./fontawesome/svgs/transformer-bolt.svg" height="30"
-    width="30">Substation Inspections</h3>
-    <p>Transform your substation maintenance program with our comprehensive
-    aerial inspection services that combine cutting-edge radiometric thermal
-    imaging technology with ultra-high-resolution optical zoom cameras to
-    deliver unprecedented visibility into your critical electrical
-    infrastructure. Our specialized inspection platforms enable thorough
-    evaluations of energized substations from safe distances, eliminating the
-    need for personnel to enter hazardous environments or implement costly
-    service interruptions that impact grid reliability and customer
-    satisfaction.</p>
-   
-   <p>Our advanced radiometric thermal cameras provide precise, calibrated
-   temperature measurements for every component within the substation, from
-   power transformers and circuit breakers to bus connections and switching
-   equipment. This sophisticated thermal analysis instantly reveals developing
-   problems such as overheating connections caused by increased resistance,
-   failing bushings, deteriorating contacts, imbalanced loads, or inadequate
-   cooling systems. By capturing accurate temperature differentials and thermal
-   patterns, our technology enables predictive maintenance teams to identify and
-   address potential failures weeks or months before they result in catastrophic
-   equipment damage or unplanned outages.</p>
-   
-   <p>Complementing our thermal capabilities, our high-powered optical zoom
-   cameras deliver crystal-clear visual inspections that detect surface-level
-   defects invisible to the naked eye from ground level. These cameras identify
-   early-stage corrosion on transformer radiators, microscopic cracks in
-   porcelain insulators, contamination buildup, oil staining indicating leaks,
-   SF6 gas emissions, loose hardware, animal damage, and structural fatigue in
-   support frameworks. The ability to conduct these detailed inspections while
-   maintaining safe distances from energized equipment represents a paradigm
-   shift in substation maintenance practices.</p>
-   
-   <p>By performing regular aerial inspections without de-energizing equipment,
-   utilities maximize operational efficiency while creating comprehensive
-   digital records of asset conditions over time. This data-driven approach
-   supports informed decision-making, optimizes capital planning, ensures
-   regulatory compliance, and ultimately delivers more reliable power to
-   customers while protecting the safety of inspection personnel and maintenance
-   crews.</p>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Services</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
-    <h2>Oil & Gas</h2>
-    <h3><img src="./fontawesome/svgs/oil-well.svg" height="30"
-    width="30"> Facility Inspections</h3>
-    Improve operational uptime with remote inspections of refineries, tanks,
-    rigs, and platforms. Our drone solutions minimize the need for scaffolding,
-    ladders, or shutdowns.
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-intro">
+                <p>Bandera Skyworks offers comprehensive drone inspection services designed to meet the unique needs of Texas utilities, energy companies, and commercial enterprises. Our advanced technology and expert team deliver actionable insights that enhance safety, reduce costs, and improve operational efficiency.</p>
+            </div>
 
-    <h3><img src="./fontawesome/svgs/pipe-valve.svg" height="30"
-    width="30"> Pipeline Monitoring</h3>
-    Cover hundreds of miles of pipeline efficiently. We detect corrosion, leaks,
-    right-of-way violations, and erosion—all while enhancing environmental
-    compliance and lowering inspection costs.
+            <!-- Powerline Inspections -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Powerline Inspections</h3>
+                    <i class="fas fa-bolt service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Our comprehensive powerline inspection services leverage cutting-edge automated flight technology and high-resolution imaging systems to transform how utilities monitor their infrastructure. We provide detailed assessments of transmission and distribution lines across the Texas Hill Country.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>Thermal imaging for hot spot detection and equipment failures</li>
+                            <li>Vegetation encroachment analysis and clearance measurements</li>
+                            <li>Insulator inspection for cracks, chips, and contamination</li>
+                            <li>Conductor and hardware assessment for wear and damage</li>
+                            <li>Storm damage rapid assessment and documentation</li>
+                            <li>Right-of-way monitoring and encroachment detection</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div>
+                                    <strong>Cost Reduction</strong><br>
+                                    90% less than helicopter inspections
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div>
+                                    <strong>Faster Coverage</strong><br>
+                                    Inspect 50+ miles per day
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <strong>Enhanced Safety</strong><br>
+                                    No crew exposure to hazards
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <strong>Predictive Data</strong><br>
+                                    AI-powered failure prediction
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Renewable Energy</h2>
-    <h3><img src="./fontawesome/svgs/solar-panel.svg" height="30"
-    width="30"> Solar Farm Inspections</h3>
-    Maximize energy production by identifying defective panels, soiling, or
-    connection issues. Our thermal-equipped drones can quickly scan entire solar
-    arrays for faults.
+            <!-- Substation Inspections -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Substation Inspections</h3>
+                    <i class="fas fa-industry service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Transform your substation maintenance program with our comprehensive aerial inspection services that combine cutting-edge radiometric thermal imaging technology with ultra-high-resolution optical zoom cameras. We inspect live substations without service interruptions.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>Radiometric thermal analysis with temperature measurements</li>
+                            <li>60x optical zoom for detailed component inspection</li>
+                            <li>Oil leak detection on transformers and equipment</li>
+                            <li>Bushing and insulator condition assessment</li>
+                            <li>SF6 gas leak detection capabilities</li>
+                            <li>Structural integrity evaluation</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-power-off"></i>
+                                </div>
+                                <div>
+                                    <strong>No Outages</strong><br>
+                                    Inspect while energized
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div>
+                                    <strong>Complete Visibility</strong><br>
+                                    Access hard-to-reach areas
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div>
+                                    <strong>Early Detection</strong><br>
+                                    Identify issues before failure
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div>
+                                    <strong>Detailed Reports</strong><br>
+                                    Comprehensive documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3><img src="./fontawesome/svgs/wind-turbine.svg" height="30"
-    width="30">Wind Turbine Inspections</h3>
-    Inspect blades, towers, and nacelles without manual climbing. We capture
-    detailed images of cracks, lightning strikes, and surface erosion, reducing
-    turbine downtime and improving safety.
+            <!-- Solar Farm Inspections -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Solar Farm Inspections</h3>
+                    <i class="fas fa-solar-panel service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Maximize your solar investment with our comprehensive PV system inspections. Using advanced thermal imaging, we quickly identify underperforming panels, hot spots, and maintenance issues across large solar arrays.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>Thermal imaging for hot spot and defective cell detection</li>
+                            <li>Panel efficiency mapping and performance analysis</li>
+                            <li>Soiling and shading assessment</li>
+                            <li>Physical damage inspection (cracks, delamination)</li>
+                            <li>Inverter and combiner box thermal analysis</li>
+                            <li>Vegetation management recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <strong>Increased Output</strong><br>
+                                    Identify underperforming panels
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <strong>Rapid Inspection</strong><br>
+                                    100+ MW inspected daily
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <div>
+                                    <strong>Targeted Maintenance</strong><br>
+                                    Prioritize repairs effectively
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <strong>ROI Tracking</strong><br>
+                                    Monitor performance trends
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Infrastructure & Construction</h2>
-    <h3><img src="./fontawesome/svgs/bridge.svg" height="30"
-    width="30"> Bridge Inspections</h3>
-    Assess aging or damaged bridges with detailed aerial surveys. Our drones
-    access hard-to-reach areas and provide structural insights without requiring
-    lane closures or heavy equipment.
+            <!-- Wind Turbine Inspections -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Wind Turbine Inspections</h3>
+                    <i class="fas fa-wind service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Comprehensive blade and tower inspections without costly downtime. Our high-resolution imaging captures defects invisible from the ground, enabling proactive maintenance that extends turbine life and maximizes energy production.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>Detailed blade inspection for cracks, erosion, and delamination</li>
+                            <li>Lightning strike damage assessment</li>
+                            <li>Tower structural analysis and coating inspection</li>
+                            <li>Nacelle and hub external inspection</li>
+                            <li>Oil leak detection and staining documentation</li>
+                            <li>Ice accumulation monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <div>
+                                    <strong>No Downtime</strong><br>
+                                    Inspect while operational
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div>
+                                    <strong>Early Detection</strong><br>
+                                    Find issues before failure
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <div>
+                                    <strong>Safer Inspections</strong><br>
+                                    No rope access required
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <strong>Faster Turnaround</strong><br>
+                                    Complete farm in days
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3><img src="./fontawesome/svgs/people-roof.svg" height="30"
-    width="30"> Roof Inspections</h3>
-    Get comprehensive data on roof conditions using thermal and RGB sensors.
-    Whether for storm damage, insurance claims, or routine maintenance, our
-    reports offer clear, actionable insights.
-    
-  </main>
+            <!-- Construction Progress Monitoring -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Construction Progress Monitoring</h3>
+                    <i class="fas fa-hard-hat service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Track construction progress with regular aerial documentation and 3D mapping. Our services provide stakeholders with comprehensive visual updates, volumetric calculations, and timeline verification throughout the project lifecycle.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>Weekly, bi-weekly, or monthly progress documentation</li>
+                            <li>High-resolution orthomosaic mapping</li>
+                            <li>3D site modeling and volumetric calculations</li>
+                            <li>Time-lapse video creation</li>
+                            <li>Stockpile volume measurements</li>
+                            <li>Safety compliance monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div>
+                                    <strong>Progress Tracking</strong><br>
+                                    Visual timeline verification
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <strong>Stakeholder Updates</strong><br>
+                                    Share progress remotely
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-ruler-combined"></i>
+                                </div>
+                                <div>
+                                    <strong>Accurate Measurements</strong><br>
+                                    Centimeter-level accuracy
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-file-invoice-dollar"></i>
+                                </div>
+                                <div>
+                                    <strong>Dispute Resolution</strong><br>
+                                    Visual documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <footer>
-    &copy; 2025 Bandera Skyworks. All rights reserved.  
-  </footer>
+            <!-- Emergency Response -->
+            <div class="service-detail-card">
+                <div class="service-header">
+                    <h3>Emergency Response Services</h3>
+                    <i class="fas fa-exclamation-triangle service-icon"></i>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        24/7 rapid deployment for storm damage assessment and critical infrastructure inspection. When disasters strike, our emergency response team provides immediate aerial intelligence to accelerate recovery efforts and restoration planning.
+                    </p>
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>24/7 emergency deployment within 2 hours</li>
+                            <li>Storm damage assessment and documentation</li>
+                            <li>Search and rescue support operations</li>
+                            <li>Flood and wildfire monitoring</li>
+                            <li>Insurance claim documentation</li>
+                            <li>Real-time data streaming to command centers</li>
+                        </ul>
+                    </div>
+                    <div class="service-benefits">
+                        <h4>Benefits</h4>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div>
+                                    <strong>Rapid Response</strong><br>
+                                    Deploy within 2 hours
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div>
+                                    <strong>Situational Awareness</strong><br>
+                                    Real-time intelligence
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div>
+                                    <strong>Faster Recovery</strong><br>
+                                    Prioritize repairs
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <div>
+                                    <strong>Insurance Support</strong><br>
+                                    Detailed documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<center>
-        <br>
-        <a href="https://x.com/BanderaSkyworks" target="_blank" rel="noopener noreferrer">
-        <img src="./fontawesome/svgs/brands/x-twitter.svg" height="40" width="40">
-        </a>
-        <a href="https://www.instagram.com/banderaskyworks/" target="_blank" rel="noopener noreferrer">
-        <img src="./fontawesome/svgs/brands/instagram.svg" height="40" width="40">
-        </a>
-</center>
+    <!-- Industries We Serve -->
+    <section class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Industries We Serve</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4>Electric Utilities</h4>
+                        <p>Transmission and distribution infrastructure inspection and monitoring</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-oil-can"></i>
+                        </div>
+                        <h4>Oil & Gas</h4>
+                        <p>Pipeline monitoring, flare stack inspection, and facility surveillance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4>Renewable Energy</h4>
+                        <p>Solar farms and wind turbine inspection and performance monitoring</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Construction</h4>
+                        <p>Project monitoring, site mapping, and progress documentation</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h4>Telecommunications</h4>
+                        <p>Cell tower inspection and antenna alignment verification</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h4>Transportation</h4>
+                        <p>Bridge inspection, road monitoring, and railway assessment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h4>Agriculture</h4>
+                        <p>Crop monitoring, irrigation assessment, and ranch surveys</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Real Estate</h4>
+                        <p>Property marketing, development planning, and site documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-text">Contact us today for a free consultation and custom quote for your project</p>
+            <a href="contact.html" class="btn-cta">Request Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-logo">
+                            <i class="fas fa-drone me-2"></i>BANDERA SKYWORKS
+                        </div>
+                        <p>Professional drone services for the Texas Hill Country. FAA certified, fully insured, and committed to excellence.</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Contact Info</h5>
+                        <p><i class="fas fa-phone me-2"></i>(210) 549-7015</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@banderaskyworks.com</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Serving Texas Hill Country</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bandera Skyworks. All rights reserved. | FAA Part 107 Certified | Fully Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

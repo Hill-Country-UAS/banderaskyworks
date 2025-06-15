@@ -1,42 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact - Bandera Skyworks</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bandera Skyworks | Professional Drone Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-drone me-2"></i>BANDERA SKYWORKS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p>Have a project in mind? We'd love to hear from you.</p>
-    <p>Email: <a href="mailto:info@banderaskyworks.com">info@banderaskyworks.com</a></p>
-    <p>Phone: (210) 549-7015</p>
-    <p>Location: Bandera, TX</p>
-  </main>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
-  <footer>
-    &copy; 2025 Bandera Skyworks. All rights reserved.
-  </footer>
+    <!-- Contact Info Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-main">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p><strong>Main:</strong> (210) 549-7015</p>
+                        <p><strong>Emergency:</strong> (210) 549-7015</p>
+                        <p class="text-muted">Available 24/7 for emergencies</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-main">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p><strong>General:</strong> info@banderaskyworks.com</p>
+                        <p><strong>Quotes:</strong> quotes@banderaskyworks.com</p>
+                        <p><strong>Support:</strong> support@banderaskyworks.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-main">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Business Hours</h4>
+                        <p><strong>Regular:</strong> Mon-Fri 8AM-6PM</p>
+                        <p><strong>Weekend:</strong> Sat 9AM-3PM</p>
+                        <p><strong>Emergency:</strong> 24/7 Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<center>
-        <br>
-        <a href="https://x.com/BanderaSkyworks" target="_blank" rel="noopener noreferrer">
-        <img src="./fontawesome/svgs/brands/x-twitter.svg" height="40" width="40">
-        </a>
-        <a href="https://www.instagram.com/banderaskyworks/" target="_blank" rel="noopener noreferrer">
-        <img src="./fontawesome/svgs/brands/instagram.svg" height="40" width="40">
-        </a>
-</center>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-intro">
+                    <h2>Request a Free Quote</h2>
+                    <p class="lead">Tell us about your project and we'll provide a custom proposal within 24 hours</p>
+                </div>
+                <form>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="company" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="company">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="projectLocation" class="form-label">Project Location</label>
+                            <input type="text" class="form-control" id="projectLocation" placeholder="City, State">
+                        </div>
+                        <div class="col-12">
+                            <label for="serviceType" class="form-label">Service Type *</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="">Select a service...</option>
+                                <option>Powerline Inspection</option>
+                                <option>Substation Inspection</option>
+                                <option>Solar Farm Inspection</option>
+                                <option>Wind Turbine Inspection</option>
+                                <option>Construction Progress Monitoring</option>
+                                <option>Emergency Response</option>
+                                <option>Multiple Services</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="projectDetails" class="form-label">Project Details *</label>
+                            <textarea class="form-control" id="projectDetails" rows="5" placeholder="Please describe your project, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="projectTimeline" class="form-label">Preferred Timeline</label>
+                            <select class="form-select" id="projectTimeline">
+                                <option value="">Select timeline...</option>
+                                <option>Immediate (Emergency)</option>
+                                <option>Within 1 week</option>
+                                <option>Within 2 weeks</option>
+                                <option>Within 1 month</option>
+                                <option>More than 1 month</option>
+                                <option>Ongoing/Regular Service</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="budget" class="form-label">Estimated Budget</label>
+                            <select class="form-select" id="budget">
+                                <option value="">Select budget range...</option>
+                                <option>Under $5,000</option>
+                                <option>$5,000 - $10,000</option>
+                                <option>$10,000 - $25,000</option>
+                                <option>$25,000 - $50,000</option>
+                                <option>Over $50,000</option>
+                                <option>Not sure</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">How did you hear about us?</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="referralGoogle">
+                                        <label class="form-check-label" for="referralGoogle">Google Search</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="referralSocial">
+                                        <label class="form-check-label" for="referralSocial">Social Media</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="referralWord">
+                                        <label class="form-check-label" for="referralWord">Word of Mouth</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center mt-5">
+                            <button type="submit" class="btn-submit">Submit Request</button>
+                            <p class="text-muted mt-3">* Required fields</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Service Area Section -->
+    <section class="service-area-section">
+        <div class="container">
+            <h2 class="section-title">Service Area</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <h4 class="mb-4">We Proudly Serve the Texas Hill Country</h4>
+                        <p>Based in Bandera County, we provide professional drone services throughout Central and South Texas. Our primary service area includes:</p>
+                        <ul class="service-area-list">
+                            <li><i class="fas fa-map-marker-alt"></i>Bandera County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Bexar County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Kendall County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Kerr County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Medina County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Gillespie County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Comal County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Travis County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Hays County</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Guadalupe
+                            County</li>
+                            <li><i class=""></i></li>
+                        </ul>
+                        <p class="mt-4"><strong>Note:</strong> We also provide services throughout Texas for large projects. Contact us to discuss your location.</p><br>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="595">
+  <!-- Background with rounded corners -->
+  <rect width="800" height="600" fill="#ffffff" rx="15" ry="15"/>
+  
+  <!-- Map Border with rounded corners -->
+  <rect x="50" y="60" width="700" height="480" fill="#e8f1f9" stroke="#1e3a5f" stroke-width="2" rx="20" ry="20"/>
+  
+  <!-- Counties (simplified shapes) -->
+  <!-- Bandera County -->
+  <path d="M 350 320 L 380 310 L 400 330 L 390 360 L 360 370 L 340 350 Z" 
+        fill="#c8102e" fill-opacity="0.3" stroke="#c8102e" stroke-width="2"/>
+  
+  <!-- Bexar County (San Antonio) -->
+  <path d="M 420 380 L 480 370 L 510 410 L 490 450 L 430 460 L 400 420 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Kendall County (Boerne) -->
+  <path d="M 380 340 L 420 330 L 440 360 L 420 390 L 380 380 L 370 360 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Kerr County (Kerrville) -->
+  <path d="M 300 280 L 350 270 L 370 300 L 350 330 L 310 340 L 290 310 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Gillespie County (Fredericksburg) -->
+  <path d="M 320 200 L 380 190 L 400 230 L 380 270 L 330 280 L 310 240 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Comal County (New Braunfels) -->
+  <path d="M 460 360 L 500 350 L 520 380 L 510 410 L 470 420 L 450 390 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Travis County (Austin) -->
+  <path d="M 520 250 L 580 240 L 600 280 L 580 320 L 530 330 L 510 290 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Medina County -->
+  <path d="M 280 380 L 330 370 L 350 400 L 340 430 L 290 440 L 270 410 Z" 
+        fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+  
+  <!-- Roads/Highways -->
+  <!-- I-10 -->
+  <path d="M 100 420 L 300 400 L 450 410 L 650 380" 
+        fill="none" stroke="#666" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="200" y="415" font-family="Arial, sans-serif" font-size="12" fill="#666">I-10</text>
+  
+  <!-- US-281 -->
+  <path d="M 400 150 L 420 250 L 440 350 L 460 450" 
+        fill="none" stroke="#666" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="410" y="200" font-family="Arial, sans-serif" font-size="12" fill="#666">US-281</text>
+  
+  <!-- Cities -->
+  <!-- Bandera (marked with star as headquarters) -->
+  <g transform="translate(370,350)">
+    <circle r="8" fill="#c8102e"/>
+    <path d="M 0,-8 L 2.4,-2.4 L 8,-0.8 L 2.4,2.4 L 0,8 L -2.4,2.4 L -8,-0.8 L -2.4,-2.4 Z" 
+          fill="#fff"/>
+  </g>
+  <text x="370" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c8102e">BANDERA</text>
+  <text x="370" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e3a5f">(Headquarters)</text>
+  
+  <!-- San Antonio -->
+  <circle cx="450" cy="420" r="10" fill="#1e3a5f"/>
+  <text x="450" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">San Antonio</text>
+  
+  <!-- Kerrville -->
+  <circle cx="330" cy="300" r="6" fill="#1e3a5f"/>
+  <text x="330" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e3a5f">Kerrville</text>
+  
+  <!-- Boerne -->
+  <circle cx="400" cy="370" r="6" fill="#1e3a5f"/>
+  <text x="400" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e3a5f">Boerne</text>
+  
+  <!-- Fredericksburg -->
+  <circle cx="350" cy="230" r="6" fill="#1e3a5f"/>
+  <text x="350" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e3a5f">Fredericksburg</text>
+  
+  <!-- New Braunfels -->
+  <circle cx="490" cy="380" r="6" fill="#1e3a5f"/>
+  <text x="490" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e3a5f">New Braunfels</text>
+  
+  <!-- Austin -->
+  <circle cx="550" cy="280" r="8" fill="#1e3a5f"/>
+  <text x="550" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">Austin</text>
+  
+  <!-- Legend with rounded corners -->
+  <g transform="translate(60,470)">
+    <rect x="0" y="0" width="200" height="100" fill="white" stroke="#1e3a5f" stroke-width="1" rx="10" ry="10"/>
+    <text x="100" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">Legend</text>
+    
+    <!-- Headquarters -->
+    <circle cx="20" cy="40" r="6" fill="#c8102e"/>
+    <path d="M 20,34 L 21.8,37.6 L 26,38.4 L 21.8,41.6 L 20,46 L 18.2,41.6 L 14,38.4 L 18.2,37.6 Z" 
+          fill="#fff" transform="scale(0.75) translate(6,18)"/>
+    <text x="35" y="45" font-family="Arial, sans-serif" font-size="12" fill="#333">Headquarters</text>
+    
+    <!-- Primary Service Area with rounded corners -->
+    <rect x="10" y="55" width="20" height="10" fill="#c8102e" fill-opacity="0.3" stroke="#c8102e" stroke-width="1" rx="2" ry="2"/>
+    <text x="35" y="65" font-family="Arial, sans-serif" font-size="12" fill="#333">Primary Service Area</text>
+    
+    <!-- Service Coverage with rounded corners -->
+    <rect x="10" y="75" width="20" height="10" fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1" rx="2" ry="2"/>
+    <text x="35" y="85" font-family="Arial, sans-serif" font-size="12" fill="#333">Service Coverage</text>
+  </g>
+  
+  <!-- Scale -->
+  <g transform="translate(600,520)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="5" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="100" y1="0" x2="100" y2="5" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1e3a5f">50 miles</text>
+  </g>
+  
+  <!-- Compass -->
+  <g transform="translate(700,100)">
+    <circle r="25" fill="white" stroke="#1e3a5f" stroke-width="2"/>
+    <path d="M 0,-20 L 5,-5 L 0,0 L -5,-5 Z" fill="#1e3a5f"/>
+    <path d="M 0,20 L 5,5 L 0,0 L -5,5 Z" fill="#e8f1f9" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="0" y="-28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">N</text>
+  </g>
+  
+  <!-- Service Area Boundary (dashed line) -->
+  <path d="M 250 180 L 400 170 L 600 200 L 640 300 L 600 400 L 500 480 L 350 490 L 250 450 L 200 350 L 220 250 Z" 
+        fill="none" stroke="#c8102e" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
+  
+  <!-- Drone Icon -->
+  <g transform="translate(150,150)">
+    <path d="M -10,-5 L -10,-10 L -5,-10 L -5,-5 M 5,-5 L 5,-10 L 10,-10 L 10,-5 M -10,5 L -10,10 L -5,10 L -5,5 M 5,5 L 5,10 L 10,10 L 10,5" 
+          stroke="#c8102e" stroke-width="1.5" fill="none"/>
+    <circle cx="-7.5" cy="-7.5" r="3" fill="none" stroke="#c8102e" stroke-width="1"/>
+    <circle cx="7.5" cy="-7.5" r="3" fill="none" stroke="#c8102e" stroke-width="1"/>
+    <circle cx="-7.5" cy="7.5" r="3" fill="none" stroke="#c8102e" stroke-width="1"/>
+    <circle cx="7.5" cy="7.5" r="3" fill="none" stroke="#c8102e" stroke-width="1"/>
+    <rect x="-5" y="-3" width="10" height="6" fill="#c8102e" rx="2"/>
+    <circle cx="0" cy="0" r="1.5" fill="#fff"/>
+  </g>
+</svg> 
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How quickly can you respond to emergency requests?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We maintain a 24/7 emergency response team that can deploy within 2 hours of your call. Our emergency services are designed for critical situations such as storm damage assessment, infrastructure failures, or urgent inspection needs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What types of deliverables do you provide?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We provide comprehensive deliverables including high-resolution photos and videos, thermal imaging reports, orthomosaic maps, 3D models, detailed inspection reports with annotations, and custom analytics based on your specific needs. All data is delivered via secure cloud storage within 48-72 hours of inspection.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Are you FAA certified and insured?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, all our pilots are FAA Part 107 certified and maintain current certifications. We carry $5 million in liability insurance and are fully compliant with all federal, state, and local regulations. We can provide certificates of insurance for your records.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            How do you handle data security and privacy?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We take data security seriously. All data is encrypted during transmission and storage. We use secure cloud platforms with SOC 2 compliance, and can accommodate specific security requirements. We sign NDAs as standard practice and can work within your company's security protocols.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            What weather conditions can you fly in?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our drones can operate in winds up to 35 mph and light rain conditions. We cannot fly in thunderstorms, heavy rain, or icing conditions for safety reasons. We monitor weather closely and will reschedule if conditions are unsafe, with no cancellation fees for weather-related delays.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-logo">
+                            <i class="fas fa-drone me-2"></i>BANDERA SKYWORKS
+                        </div>
+                        <p>Professional drone services for the Texas Hill Country. FAA certified, fully insured, and committed to excellence.</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                            <li><a href="services.html" class="text-white text-decoration-none">Our Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Contact Info</h5>
+                        <p><i class="fas fa-phone me-2"></i>(210) 549-7015</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@banderaskyworks.com</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Serving Texas Hill Country</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bandera Skyworks. All rights reserved. | FAA Part 107 Certified | Fully Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="contact-form.js"></script>
 </body>
 </html>
-
