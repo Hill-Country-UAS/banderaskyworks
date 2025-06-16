@@ -3,7 +3,7 @@
 /* CSS Variables */
 :root {
     --navy: #1e3a5f;
-    --red: #c8102e;
+    --red: #1e3a5f;
     --light-blue: #e8f1f9;
     --dark-gray: #2c3e50;
     --white: #ffffff;
@@ -62,7 +62,7 @@ body {
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: var(--red);
+    background-color: #c8102e;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -77,7 +77,7 @@ body {
     position: relative;
     height: 70vh;
     min-height: 500px;
-    background: linear-gradient(rgba(30,58,95,0.8), rgba(30,58,95,0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%231e3a5f" width="1920" height="1080"/><path fill="%23c8102e" opacity="0.1" d="M0 400L80 450L160 400L240 450L320 400L400 450L480 400L560 450L640 400L720 450L800 400L880 450L960 400L1040 450L1120 400L1200 450L1280 400L1360 450L1440 400L1520 450L1600 400L1680 450L1760 400L1840 450L1920 400V1080H0V400Z"/></svg>');
+    background: var(--navy);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -92,7 +92,7 @@ body {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(200,16,46,0.1) 0%, transparent 70%);
+    background: none;
     animation: pulse 20s ease-in-out infinite;
 }
 
@@ -123,7 +123,7 @@ body {
 
 /* Page Headers (Inner Pages) */
 .page-header {
-    background: linear-gradient(rgba(30,58,95,0.9), rgba(30,58,95,0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400"><rect fill="%231e3a5f" width="1920" height="400"/><path fill="%23c8102e" opacity="0.1" d="M0 200L80 225L160 200L240 225L320 200L400 225L480 200L560 225L640 200L720 225L800 200L880 225L960 200L1040 225L1120 200L1200 225L1280 200L1360 225L1440 200L1520 225L1600 200L1680 225L1760 200L1840 225L1920 200V400H0V200Z"/></svg>');
+    background: var(--navy);
     background-size: cover;
     background-position: center;
     padding: 120px 0 80px;
@@ -177,9 +177,9 @@ body {
 }
 
 .btn-primary-hero {
-    background-color: var(--red);
+    background-color: #c8102e;
     color: var(--white);
-    border: 2px solid var(--red);
+    border: 2px solid #c8102e;
 }
 
 .btn-primary-hero:hover {
@@ -202,7 +202,7 @@ body {
 }
 
 .btn-submit {
-    background-color: var(--red);
+    background-color: #c8102e;
     color: var(--white);
     padding: 15px 50px;
     font-size: 1.1rem;
@@ -213,7 +213,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: var(--navy);
+    background-color: #a00d28;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
@@ -288,7 +288,7 @@ body {
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--red);
+    color: #c8102e;
     margin-bottom: 10px;
 }
 
@@ -321,7 +321,7 @@ body {
 
 .service-preview-icon {
     font-size: 3rem;
-    color: var(--red);
+    color: #c8102e;
     margin-bottom: 20px;
 }
 
@@ -360,7 +360,7 @@ body {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    background: none;
 }
 
 .service-header h3 {
@@ -417,7 +417,7 @@ body {
     font-weight: 900;
     position: absolute;
     left: 0;
-    color: var(--red);
+    color: #c8102e;
 }
 
 .service-benefits {
@@ -470,7 +470,7 @@ body {
 .feature-icon {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, var(--navy), var(--red));
+    background: var(--navy);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -520,7 +520,7 @@ body {
 
 .mvv-icon {
     font-size: 3rem;
-    color: var(--red);
+    color: #c8102e;
     margin-bottom: 20px;
 }
 
@@ -544,7 +544,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--navy), var(--red));
+    background: var(--navy);
     margin: 0 auto 20px;
     display: flex;
     align-items: center;
@@ -559,7 +559,7 @@ body {
 }
 
 .team-member .position {
-    color: var(--red);
+    color: #c8102e;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -615,7 +615,7 @@ body {
     width: 45%;
     text-align: right;
     font-weight: 700;
-    color: var(--red);
+    color: #c8102e;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
@@ -634,7 +634,7 @@ body {
     width: 20px;
     height: 20px;
     margin-left: -10px;
-    background: var(--red);
+    background: #c8102e;
     border: 4px solid var(--white);
     border-radius: 50%;
     z-index: 1;
@@ -726,7 +726,7 @@ body {
 .contact-icon-main {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--navy), var(--red));
+    background: var(--navy);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -775,7 +775,7 @@ body {
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--red);
+    border-color: #c8102e;
     box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.15);
 }
 
@@ -820,7 +820,7 @@ body {
 }
 
 .service-area-list i {
-    color: var(--red);
+    color: #c8102e;
     margin-right: 10px;
 }
 
@@ -854,7 +854,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--navy), var(--red));
+    background: var(--navy);
     color: var(--white);
     padding: 80px 0;
     text-align: center;
@@ -908,7 +908,7 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: var(--red);
+    background-color: #c8102e;
     transform: translateY(-3px);
 }
 
