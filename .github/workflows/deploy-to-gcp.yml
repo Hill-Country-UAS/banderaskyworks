@@ -1,0 +1,130 @@
+name: Deploy to GCP VM
+
+on:
+  push:
+    branches:
+      - main
+      - beta
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  VM_NAME: ${{ secrets.GCP_VM_NAME }}
+  ZONE: ${{ secrets.GCP_ZONE }}
+  SERVICE_ACCOUNT_EMAIL: ${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}
+
+jobs:
+  deploy:
+    name: Deploy to GCP VM
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        version: 'latest'
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+    - name: Set up Cloud SDK
+      run: |
+        gcloud config set project ${{ env.PROJECT_ID }}
+        gcloud config set compute/zone ${{ env.ZONE }}
+
+    - name: Deploy to VM
+      run: |
+        # Create a deployment script
+        cat > deploy-script.sh << 'EOF'
+        #!/bin/bash
+        set -e
+        
+        # Variables
+        DEPLOY_DIR="/var/www/banderaskyworks"
+        BACKUP_DIR="/var/www/backups"
+        TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+        
+        # Create directories if they don't exist
+        sudo mkdir -p $DEPLOY_DIR
+        sudo mkdir -p $BACKUP_DIR
+        
+        # Create backup of current deployment
+        if [ -d "$DEPLOY_DIR" ] && [ "$(ls -A $DEPLOY_DIR)" ]; then
+          echo "Creating backup..."
+          sudo tar -czf "$BACKUP_DIR/backup_$TIMESTAMP.tar.gz" -C "$DEPLOY_DIR" .
+          
+          # Keep only last 5 backups
+          cd $BACKUP_DIR
+          ls -t backup_*.tar.gz | tail -n +6 | xargs -r sudo rm
+        fi
+        
+        # Clear deployment directory
+        sudo rm -rf $DEPLOY_DIR/*
+        
+        # Copy new files
+        sudo cp -r /tmp/deployment/* $DEPLOY_DIR/
+        
+        # Set proper permissions
+        sudo chown -R www-data:www-data $DEPLOY_DIR
+        sudo find $DEPLOY_DIR -type d -exec chmod 755 {} \;
+        sudo find $DEPLOY_DIR -type f -exec chmod 644 {} \;
+        
+        # Restart web server (adjust based on your setup - nginx/apache)
+        if systemctl is-active --quiet nginx; then
+          sudo systemctl reload nginx
+          echo "Nginx reloaded"
+        elif systemctl is-active --quiet apache2; then
+          sudo systemctl reload apache2
+          echo "Apache reloaded"
+        fi
+        
+        echo "Deployment completed successfully!"
+        EOF
+
+        # Copy files to VM
+        echo "Copying files to VM..."
+        gcloud compute scp --recurse \
+          --zone=${{ env.ZONE }} \
+          ./*.html \
+          ./*.css \
+          ./*.js \
+          ./*.png \
+          ${{ env.VM_NAME }}:/tmp/deployment/
+
+        # Execute deployment script
+        echo "Running deployment script..."
+        gcloud compute ssh ${{ env.VM_NAME }} \
+          --zone=${{ env.ZONE }} \
+          --command="bash -s" < deploy-script.sh
+
+    - name: Verify deployment
+      run: |
+        # Check if the site is accessible
+        EXTERNAL_IP=$(gcloud compute instances describe ${{ env.VM_NAME }} \
+          --zone=${{ env.ZONE }} \
+          --format='get(networkInterfaces[0].accessConfigs[0].natIP)')
+        
+        echo "VM External IP: $EXTERNAL_IP"
+        
+        # Wait for deployment to settle
+        sleep 10
+        
+        # Check if site is responding
+        if curl -f -s -o /dev/null "http://$EXTERNAL_IP"; then
+          echo "✅ Site is accessible at http://$EXTERNAL_IP"
+        else
+          echo "⚠️  Site may not be accessible. Please check your web server configuration."
+        fi
+
+    - name: Cleanup
+      if: always()
+      run: |
+        # Clean up temporary files on VM
+        gcloud compute ssh ${{ env.VM_NAME }} \
+          --zone=${{ env.ZONE }} \
+          --command="sudo rm -rf /tmp/deployment"
