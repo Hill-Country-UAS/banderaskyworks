@@ -88,13 +88,22 @@ jobs:
 
         # Copy files to VM
         echo "Copying files to VM..."
+        # Create deployment directory structure on VM first
+        gcloud compute ssh ${{ env.VM_NAME }} \
+          --zone=${{ env.ZONE }} \
+          --command="mkdir -p /tmp/deployment/assets/{css,js,images}"
+        
+        # Copy HTML files
         gcloud compute scp --recurse \
           --zone=${{ env.ZONE }} \
           ./*.html \
-          ./*.css \
-          ./*.js \
-          ./*.png \
           ${{ env.VM_NAME }}:/tmp/deployment/
+        
+        # Copy assets
+        gcloud compute scp --recurse \
+          --zone=${{ env.ZONE }} \
+          ./assets/* \
+          ${{ env.VM_NAME }}:/tmp/deployment/assets/
 
         # Execute deployment script
         echo "Running deployment script..."

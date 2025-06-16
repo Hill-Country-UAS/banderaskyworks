@@ -66,13 +66,20 @@ banderaskyworks/
 ├── about.html          # About Us page
 ├── services.html       # Services page
 ├── contact.html        # Contact page with form
-├── styles.css          # Main stylesheet
-├── contact-form.js     # Contact form handler
-├── logo3.png          # Company logo
-├── pl-inspection.png  # Service image
+├── assets/
+│   ├── css/
+│   │   └── styles.css  # Main stylesheet
+│   ├── js/
+│   │   └── contact-form.js  # Contact form handler
+│   └── images/
+│       ├── logo3.png   # Company logo
+│       ├── logo2.png   # Alternative logo
+│       └── pl-inspection.png  # Service image
+├── old/                # Archived files
 └── .github/
     └── workflows/
-        └── deploy-to-gcp.yml  # Deployment workflow
+        ├── deploy-to-gcp.yml  # Deployment workflow
+        └── README.md          # Deployment documentation
 ```
 
 ## 🔧 Configuration
@@ -82,7 +89,7 @@ banderaskyworks/
 The contact form uses EmailJS. To configure:
 
 1. Sign up at [EmailJS](https://www.emailjs.com/)
-2. Update credentials in `contact-form.js`:
+2. Update credentials in `assets/js/contact-form.js`:
    - Public Key: Line 7
    - Service ID: Line 50
    - Template ID: Line 50
@@ -103,7 +110,7 @@ See `.github/workflows/README.md` for detailed GCP deployment setup.
 
 ### Colors
 
-Edit CSS variables in `styles.css`:
+Edit CSS variables in `assets/css/styles.css`:
 ```css
 :root {
     --navy: #1e3a5f;
